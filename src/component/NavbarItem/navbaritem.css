@@ -1,0 +1,11 @@
+.nav-item {
+  cursor: pointer;
+  padding: 20px;
+  transition: all 0.3s;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

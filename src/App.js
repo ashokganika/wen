@@ -1,10 +1,11 @@
 import "./App.css";
-import Bank from "./component/Bank/Bank";
+
+import Navbar from "./component/navbar/navbar";
 
 function App() {
   return (
     <div className="App">
-      <Bank />
+      <Navbar />
     </div>
   );
 }
