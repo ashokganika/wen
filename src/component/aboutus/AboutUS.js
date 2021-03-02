@@ -3,7 +3,7 @@ import React from "react";
 function AboutUS() {
   return (
     <div>
-      About US
+      <h2>About US</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
         doloribus, eos, iusto illo molestias tempora ea cumque atque ad quo
