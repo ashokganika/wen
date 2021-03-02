@@ -12,6 +12,7 @@ class Bank extends Component {
   render() {
     return (
       <div className="bank">
+        <h1>Welcome to Bank X</h1>
         {this.state?.BankEmployeeDetails?.map((item, i) => (
           <div key={item.Id} className="individual">
             <p>{item.Name.replace(/[_]/g, " ")}</p>
