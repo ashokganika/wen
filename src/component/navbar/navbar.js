@@ -1,48 +1,51 @@
 import React, { Component } from "react";
 import { NavBarItems } from "../../constant";
+import AboutUS from "../aboutus/AboutUS";
 import Bank from "../Bank/Bank";
+import Gallery from "../gallery/gallery";
 import Home from "../home/Home";
 import NavbarItem from "../NavbarItem/NavbarItem";
+import Product from "../product/product";
 import "./navbar.css";
 
 export default class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      componentId: null,
+      componentId: "",
     };
   }
 
   handleClick = (id) => {
-    console.log(id);
     this.setState({ componentId: id });
   };
 
   render() {
     let { componentId } = this.state;
-    const navBarIttems = NavBarItems;
+
     return (
       <>
         <div className="navbar">
-          <div id="logo" onClick={() => this.handleClick(null)}>
+          <div id="logo" onClick={() => this.handleClick("")}>
             W<span>EN</span>
           </div>
-          {navBarIttems.map(({ id, name }) => (
+
+          {NavBarItems.map(({ id, name }) => (
             <NavbarItem
               key={id}
               name={name}
-              onClick={() => this.handleClick(id)}
+              onClick={() => this.handleClick(name)}
+              active={componentId}
             />
           ))}
         </div>
-        <div className="space"></div>
+
         <div className="com">
-          {" "}
-          {componentId === 1 && <Home />}
-          {componentId === 2 && <h2>About US</h2>}
-          {componentId === 3 && <h2>Products</h2>}
-          {componentId === 4 && <Bank />}
-          {componentId === 5 && <h2>Gallery</h2>}
+          {componentId === "Home" && <Home />}
+          {componentId === "About Us" && <AboutUS />}
+          {componentId === "Products" && <Product />}
+          {componentId === "Blog" && <Bank />}
+          {componentId === "Gallery" && <Gallery />}
         </div>
       </>
     );
