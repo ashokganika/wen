@@ -31,3 +31,9 @@ button:hover {
   color: white;
   background-color: tomato;
 }
+
+@media only screen and (max-width: 600px) {
+  .bank {
+    width: 100%;
+  }
+}
